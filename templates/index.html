@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Компьютерный клуб Underground</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_КЛЮЧ_API&lang=ru_RU"></script>
+    <script src="static/js/script.js"></script>
 </head>
+
 <body>
     <header>
-        <h1>Underground cyber club</h1>
-        <nav>
-            <ul>
-                <li><a href="#section1">Главная</a></li>
-                <li><a href="#section2">Зоны</a></li>
-                <li><a href="#section3">Цены</a></li>
-                <li><a href="#section4">Фото</a></li>
-                <li><a href="#section5">Адрес</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="header-sections">
+                <nav>
+                    <ul>
+                        <li><a href="#section1">Главная</a></li>
+                        <li><a href="#section2">Зоны</a></li>
+                        <li><a href="#section3">Цены</a></li>
+                        <li><a href="#section4">Фото</a></li>
+                        <li><a href="#section5">Адрес</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-phone">Телефон: +ИльяОлдMonkey</div>
+        </div>
+        <div class="header-divider"></div>
     </header>
+
+    <img style="width: 520px; height: 109px; position: relative" src="static/images/rKkT40cVGRc.jpg" />
+    <div class="image-caption">
+        <p class="caption-text">ПЕРВЫЙ КИБЕРКЛУБ В КАШИНЕ</p>
+    </div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="static/images/image1.jpg"> </div>
+            <div class="swiper-slide"><img src="static/images/image2.jpg"> </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop:true,
+            autoplay: {
+                delay: 3000,
+            disableOnInteraction: false,
+            },
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
 
     <section id="section1">
         <h2>Раздел главной</h2>
     </section>
 
-        <section id="section2">
+    <section id="section2">
         <h2>Раздел зон</h2>
     </section>
 
-        <section id="section3">
+    <section id="section3">
         <h2>Раздел цен</h2>
     </section>
 
-        <section id="section4">
+    <section id="section4">
         <h2>Раздел фото</h2>
     </section>
 
     <section id="section5">
-        <h2>Раздел адреса</h2>
+        <div id="map" class="map"></div>
     </section>
-
-
 </body>
+
 </html>

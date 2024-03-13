@@ -1,17 +1,35 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding: 0 20%;
 }
 
 header {
-    background-color: #333;
+    background-color: black;
     color: white;
     padding: 10px;
     text-align: center;
+    width: 100%;
+    height: 5vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-sections {
+    float: left;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -23,4 +41,100 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+.header-phone {
+    float: right;
+    text-align: left;
+    margin: 0;
+}
+
+.header-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+img {
+    margin-left: -20px; /* Это значение может быть изменено в зависимости от вашего дизайна */
+}
+
+.image-caption {
+    text-align: left;
+}
+
+.caption-text {
+    font-family: 'Inter Black', sans-serif;
+    color: white;
+    margin-top: 10px; /* Регулируйте отступ сверху в зависимости от вашего дизайна */
+    font-size: 55px; /* Устанавливаем размер шрифта в 55px */
+    font-weight: bold; /* Делаем текст жирным */
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles for each individual slide */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for images within the slides */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Add rounded corners to images */
+}
+
+/* Styles for navigation buttons */
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    background-color: #2c3e50; /* Change the button color to your preference */
+    color: #ffffff; /* Set the text color for the buttons */
+    border-radius: 50%; /* Make the buttons circular */
+    width: 40px; /* Adjust the width of the buttons */
+    height: 40px; /* Adjust the height of the buttons */
+    margin: 0 10px; /* Add margin for spacing between buttons and slides */
+}
+
+/* Styles for pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles for pagination bullets */
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #7f8c8d; /* Change the bullet color to your preference */
+    border-radius: 50%; /* Make the bullets circular */
+    display: inline-block;
+    margin: 0 5px; /* Add margin for spacing between bullets */
+    cursor: pointer;
+}
+
+/* Styles for active pagination bullet */
+.swiper-pagination-bullet-active {
+    background-color: #ffffff; /* Change the active bullet color to your preference */
+}
+
+.map{
+    width: auto;
+    height:auto;
+    background-color: #222;
 }
