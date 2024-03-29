@@ -160,14 +160,14 @@ tbody {
 
 @media screen and (min-width: 769px) {
     .undergroundimgpc {
-        width: 40%;
+        width: 30%;
 
     }
 }
 
 @media screen and (max-width: 768px) {
     .undergroundimgmob {
-        height: 50px;
+        height: 20px;
     }
 }
 
