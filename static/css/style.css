@@ -127,6 +127,7 @@ tbody {
 .accordion {
     border: 1px solid white;
     padding: 20px;
+    position: relative;
     cursor: pointer; /* Добавлено для показа, что кнопка активна для нажатия */
 }
 
@@ -167,7 +168,8 @@ tbody {
 
 @media screen and (max-width: 768px) {
     .undergroundimgmob {
-        height: 20px;
+        width: 30px; /* Установите желаемую ширину */
+        height: 30px; /* Установите желаемую высоту */
     }
 }
 
@@ -200,3 +202,29 @@ tbody {
     background: #000 !important;
 }
 
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Расположение стрелки справа */
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; /* Анимация поворота */
+}
+
+.accordion.open .arrow {
+    transform: translateY(-50%) rotate(180deg); /* Поворот стрелки при открытом состоянии */
+}
+
+.mortal-kombat-character {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 100%; /* Полностью за пределами экрана справа */
+    transition: left 0.5s ease;
+    z-index: 9999;
+}
+
+
+.mortal-kombat-character.show {
+    left: 0; /* Показать изображение слева */
+}

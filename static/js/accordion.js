@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.accordion').forEach((el) => {
         el.addEventListener('click', () => {
+            el.classList.toggle('open');
             let content = el.nextElementSibling;
 
             if (content.style.maxHeight) {
